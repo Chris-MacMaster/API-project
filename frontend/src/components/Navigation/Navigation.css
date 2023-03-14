@@ -12,6 +12,8 @@
     justify-content: space-between;
     padding-left: 3%;
     padding-right: 3%;
+    /* position: sticky; */
+    /* top: 16px; */
 
 }
 
@@ -26,5 +28,131 @@ li {
 .careBnB {
     display: inline;
     margin-left: 30px;
+    color: blue;
+    font-weight: bold;
+    font-size: xx-large;
 }
 
+
+.fa-home {
+    color: black;
+    position: relative;
+    bottom: 4px;
+    /* border: 2px solid blue */
+    /* background-color: blue; */
+    /* transition: color 2s; */
+}
+
+.fa-home:hover {
+    color: orange;
+    /* doesnt work, could play around with divs to see if that fixes it. it might be the nav element */
+    /* color: orange; */
+    /* background-color: orange; */
+}
+
+.dropdown-button {
+    margin-left: 10px;
+    position: relative;
+    top: 3px;
+}
+
+#home-dropdown {
+    margin-top: 7px;
+    border: 2px solid black;
+    padding-left: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#manage-spots {
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    padding-top: 5px;
+    padding-bottom: 8px;
+    /* margin-bottom: 5px; */
+}
+
+.main-logout {
+    border-radius: 25px;
+
+}
+
+.main-dropdown-li {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    /* margin-top: 5px; */
+    border-left: 2px solid black;
+    /* border-top: 2px solid black; */
+    /* border-bottom: 2px solid black; */
+}
+
+.profile-dropdown {
+    margin-top: 8px;
+    border: 2px solid black;
+    /* padding-left: 0px; */
+}
+
+.profile-dropdown {
+    border: none;
+}
+
+#hello {
+    border-top: 2px solid black;
+    border-right: 2px solid black;
+}
+
+#email, #manage-spots, #logout {
+    border-right: 2px solid black;
+}
+
+#logout {
+    border-bottom: 2px solid black;
+}
+
+#manage-text {
+    color: blue;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    /* color: blue; */
+}
+
+#manage-text:active {
+    color: orange;
+}
+
+#hello, #email, #manage-spots {
+    text-align: left;
+    /* margin-left: 15px; */
+}
+
+#hello, #email {
+    padding-bottom: 5px;
+}
+
+#logout {
+    width: 100%;
+}
+
+.manage-reviews {
+    border-top: none;
+    border-right: 2px solid black
+}
+
+#review-text {
+    color: blue;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: left;
+    /* color: blue; */
+}
+
+#dropdown-menu {
+    position: absolute;
+    /* background-color: white; */
+}
+
+#dropdown-menu > li {
+    background-color: #B8B8B8;
+}

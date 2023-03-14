@@ -24,19 +24,19 @@ module.exports = {
     await queryInterface.bulkInsert(options, [
       {
         spotId: 1,
-        url: "url1",
+        url: "https://images.pexels.com/photos/584399/living-room-couch-interior-room-584399.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
         preview: true
       },
 
       {
         spotId: 2,
-        url: "url2",
+        url: "https://images.pexels.com/photos/3201763/pexels-photo-3201763.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
         preview: true
       },
 
       {
         spotId: 3,
-        url: "url3",
+        url: "https://images.pexels.com/photos/205078/pexels-photo-205078.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
         preview: false
       },
 

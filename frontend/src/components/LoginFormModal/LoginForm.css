@@ -3,3 +3,88 @@
 /* body {
     background-color: aqua;
 } */
+
+
+
+#modal-content {
+    width: 350px;
+    height: 250px;
+    border-radius: 25px;
+    /* border: 2px solid black */
+    /* border: 2px solid red; */
+    /* color: red; */
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+}
+
+
+
+.login-form {
+    /* color: blue; */
+    background-color: #B8B8B8;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    /* height: fit-content; */
+    /* inherits form css from create a spot form */
+    justify-content: space-between;
+    /* align-items: right; */
+    border: 2px solid black;
+
+    padding-top: 10px;
+}
+
+.login-p {
+    /* align-items: center; */
+    display: flex;
+    justify-content: center;
+    color: black;
+    font-size: larger;
+
+
+    font-weight: bolder;
+    margin-top: 0px;
+
+
+    
+    /* color: blue; */
+}
+
+.modal-login-button {
+    width: 90%;
+    margin-bottom: 20px
+};
+
+.modal-login-demo-button {
+    /* background-color: blue;
+    color: red; */
+}
+
+#demo-button {
+    /* color: red; */
+    background-color: blue;
+    width: fit-content;
+
+}
+
+
+.login-modal-div {
+    height: 100%;
+    border-radius: 25px;
+
+    /* border: 2px solid black */
+}
+
+.login-input {
+    width: 93%;
+    margin-left: 7px;
+    margin-bottom: 10px;
+}
+
+#how-was-stay {
+    font-size: larger;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,13 @@
+/* Insert SpotIndex Styling Here */
+
+
+.spotIndex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#current-spot-create-button {
+    margin-bottom: 8px;
+}

@@ -1,1 +1,26 @@
 /* TODO Add site wide styles */
+
+
+* {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+body {
+    background-color: teal;
+}
+
+img {
+    object-fit: cover;
+}
+
+
+.white-button {
+    color: white;
+}
+
+.white-button:hover {
+    background-color: orange;
+    /* color: blue; */
+    /* border: 2px solid orange; */
+}

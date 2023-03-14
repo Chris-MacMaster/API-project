@@ -1,0 +1,32 @@
+/* insert EditSpot styling here */
+
+
+#update-your-spot {
+    font-size: larger;
+}
+
+#only-booked {
+    font-size: small;
+    margin-top: 2px;
+}
+
+#where-place, #describe-to-guests {
+    margin-bottom: 0px;
+}
+
+.desc-text {
+    font-size: small;
+}
+
+.edit-button {
+    background-color: blue;
+}
+
+label {
+    font-size: small;
+}
+
+.mention-text {
+    margin-top: 5px;
+}
+

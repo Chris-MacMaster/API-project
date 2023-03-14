@@ -126,8 +126,8 @@ router.get('/', async (req, res) => {
     
 
     const spots = await Spot.findAll({
-        where, ...paging
-    })
+        where//, ...paging
+    })//temporaril shut off paging 
 
     if (!spots.length) {
         let err = new Error("No spots found matching those parameters")
@@ -166,6 +166,7 @@ router.get('/', async (req, res) => {
                 }
             }
         )
+        console.log(spotReviews)
         let newSpot = spots[i].toJSON()
 
         let count = 0;
@@ -237,6 +238,7 @@ router.get('/current', requireAuth, async (req, res) => {
 
         let count = 0;
         let sum = 0;
+        console.log("SPOT REVIEWS", spotReviews)
 
         if (spotReviews.length) {
             count = spotReviews.length
@@ -260,7 +262,9 @@ router.get('/current', requireAuth, async (req, res) => {
 
 
 //Create a new spot
-router.post('/', requireAuth, async (req, res) => {
+router.post("/", requireAuth, async (req, res) => {
+
+    console.log("FROM POST ROUTE", req.body)
 
     const { address, city, state, country, lat, lng, name,
     description,
@@ -268,7 +272,20 @@ router.post('/', requireAuth, async (req, res) => {
     } = req.body
 
 
-    let newSpot = await Spot.create({
+    // let newSpot = await Spot.validate({
+    //     ownerId: req.user.id,
+    //     address,
+    //     city,
+    //     state,
+    //     country,
+    //     lat,
+    //     lng,
+    //     name,
+    //     description,
+    //     price
+    // })
+    
+    newSpot = await Spot.create({
         ownerId: req.user.id,
         address,
         city,
@@ -316,6 +333,8 @@ router.get('/:spotId', async (req, res) => {
         as: "Owner"
         }], 
     })
+
+
     if (!spot.length){
         let err = new Error('Spot does not exist with the provided id')
         err.status = 404 
@@ -325,15 +344,18 @@ router.get('/:spotId', async (req, res) => {
     spot = spot[0].toJSON() 
 
     spot.numReviews = reviewCount
+    console.log("STAR SUM", starSum, "REVIEW COUNT", reviewCount)
     if (starSum){
         spot.avgStarRating = (starSum / reviewCount)
     } else {
         spot.avgStarRating = "No reviews found"
     }
 
-    delete spot.SpotImages[0].createdAt
-    delete spot.SpotImages[0].updatedAt
-    delete spot.SpotImages[0].spotId
+    if (spot.SpotImages.length) {
+        delete spot.SpotImages[0].createdAt
+        delete spot.SpotImages[0].updatedAt
+        delete spot.SpotImages[0].spotId
+    }
 
     delete spot.Owner.username
 
@@ -431,6 +453,7 @@ router.get('/:spotId/reviews', async (req, res) => {
     })
 
     if (!reviews.length){
+        // console.log("REVIEWS", reviews)
         let err = new Error('No spots with that id exist')
         err.status = 404
         throw err
@@ -449,9 +472,9 @@ router.post('/:spotId/reviews', requireAuth, async (req, res) => {
         throw err
     }
 
-    if (req.user.id !== spot.ownerId) {
-        throw new Error('Only spot owner may post review')
-    }
+    // if (req.user.id !== spot.ownerId) {
+    //     throw new Error('Only spot owner may post review')
+    // }
 
     let ifReview = await Review.findAll({
         where: {
@@ -484,12 +507,18 @@ router.post('/:spotId/reviews', requireAuth, async (req, res) => {
 
 //create a booking for a spot
 router.post('/:spotId/bookings', requireAuth, async(req, res) => {
-    if (parseInt(req.params.spotId) === req.user.id) {
+    // if (parseInt(req.params.spotId) === req.user.id) {
+    //     let err = new Error('You cannot create a booking at a spot you already own')
+    //     throw err
+    // }
+
+   let spot = await Spot.findByPk(req.params.spotId)
+
+
+    if (parseInt(spot.ownerId) === req.user.id) {
         let err = new Error('You cannot create a booking at a spot you already own')
         throw err
     }
-
-   let spot = await Spot.findByPk(req.params.spotId)
 
    if (!spot){
     let err = new Error('Spot does not exist with provided id')

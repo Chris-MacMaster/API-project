@@ -1,0 +1,39 @@
+.review-card {
+    /* color: blue; */
+    font-weight: bold;
+    border: 2px solid black;
+    width: 45%;
+    border-radius: 25px;
+    background-color: #B8B8B8;
+}
+
+.review-card:hover {
+    /* border: 2px solid orange; */
+}
+
+.reviewIndexItem {
+    width: 97%;
+    margin-bottom: 40px;
+}
+
+.date-string-text {
+    color: white;
+    font-size: small;
+}
+
+.user-firstname {
+    font-size: large;
+}
+
+.review-review-text {
+    font-weight: normal;
+}
+
+.user-firstname {
+    margin-left: 10px;
+}
+
+.review-buttons {
+    display: flex;
+    justify-content: space-around;
+}

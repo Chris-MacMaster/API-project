@@ -1,0 +1,202 @@
+/* To Do: Insert Spot Detail Styling Here */
+
+/* .post-review-modal-button {
+} */
+
+.hosted-row {
+    color: black;
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.reserve-box {
+    border: 2px solid black;
+    width: 40%;
+    height: 100px;
+    border-radius: 25px;
+    background-color:#B8B8B8;
+    margin-right: 16px;
+    
+    max-width: 350px;
+}
+
+
+
+.preview-image {
+    display: inline-block;
+    /* background-color: chocolate; */
+    width: 50%;
+    height: 412px;
+    margin: 2px;
+    box-sizing: border-box;
+}
+
+.spot-images-div {
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: space-between;
+    background-color: #B8B8B8;
+    /* border: 2px solid black; */
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    /* border-radius: 25px; */
+}
+
+.spot-images-subdiv {
+    display: inline-block;
+    /* background-color: #B8B8B8; */
+    width: 50%;
+}
+
+
+
+#img1, #img2, #img3, #img4 {
+    box-sizing: border-box;
+    width: 50%;
+    height: 205px;
+    margin: 2px;
+}
+
+.images-subdiv-row1, .images-subdiv-row2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.reviewAvg-reviewNum {
+    display: flex;
+    border-bottom: 2px solid black;
+    margin-bottom: 10px;
+    height: 5px;
+}
+
+.avgRating-text {
+    margin-right: 8px;
+    position: relative;
+    bottom: 2px;
+}
+
+
+.reserve-box-row1 {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 5px;
+}
+
+.box-reviewAvg-reviewNum {
+    display: flex;
+    padding-right: 10px;
+    /* padding-left: 10px; */
+}
+
+.reserve-box-row2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reserve-box-2 {
+    width: 100%;
+}
+
+
+.reserve-button {
+    /* display: inline; */
+    /* background-color: red; */
+    font-weight: bold;
+    color: white;
+    width: 90%;
+}
+
+/* .img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+} */
+
+.spot-image-3, .spot-image-4 {
+    object-fit: cover;
+    /* max-width: 100%; */
+    /* max-height: 100%; */
+}
+
+
+.preview-image-url {
+    width: 100%;
+    height: 100%
+}
+
+#img1 {
+    margin-right: 0px;
+}
+
+.hosted-title {
+    font-size: larger;
+}
+
+
+.hosted-div {
+    /* max-width: 60%; */
+    width: 100%;
+    margin-right: 20px;
+    height: fit-content;
+    /* border: 2px solid black; */
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    /* border-radius: 25px; */
+    background-color: #B8B8B8;
+}
+
+
+.hosted-description {
+    margin-bottom: 0px;
+    width: 100%;
+    /* color: red; */
+}
+
+.spot-name {
+
+}
+
+.avg-rating {
+    font-size: large;
+}
+
+.review-index {
+    /* height: 10000px; */
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+
+}
+
+.reviewIndexItem {
+    height: fit-content;
+}
+
+#img1, #img2, #img3, #img4, .preview-image-url {
+    border: none;
+} 
+
+.avg-rating {
+    display: flex;
+}
+
+/* .price-night {
+    padding-left: 10px;
+} */
+
+
+.box-reviewAvg-reviewNum {
+    display: flex;
+    align-items: center;
+}
+
+.box-dot-reviews {
+    margin-left: 4px;
+}

@@ -1,0 +1,36 @@
+/* to do add createReview styling */
+
+
+
+
+.create-review-button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 90%;
+    height: 40px;
+}
+
+.input-1 {
+    background-color: blue;
+}
+
+.description-textarea {
+    width: 90%;
+}
+
+.paw-stars {
+    display: flex;
+    width: 30%;
+    justify-content: space-between;
+}
+
+.filled {
+    color: yellow;
+}
+
+.stars {
+    display: inline;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 5px;
+}

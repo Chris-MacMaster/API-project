@@ -1,0 +1,16 @@
+.div-buttons {
+        background-color: #B8B8B8;
+        border: 4px solid blue;
+        height: 50px;
+        border-radius: 25px;
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 20px;
+        /* width: 260px; */
+        margin-left: 120px;
+        position: relative;
+        bottom: 45px
+
+}
+
+
